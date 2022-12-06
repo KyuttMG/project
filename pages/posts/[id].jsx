@@ -1,9 +1,7 @@
 import Layout from "../../components/layout";
-
 import { getAllPostIds } from "../../lib/posts";
 
-export default function Post({ param }) {
-  console.log(param);
+export default function Post() {
   return <Layout>...</Layout>;
 }
 
@@ -14,12 +12,6 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
-
 export async function getStaticProps({ params }) {
-  console.log(params.id);
-  return {
-    props: {
-      param: params.id,
-    },
-  };
+  // Fetch necessary data for the blog post using params.id
 }
